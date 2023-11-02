@@ -21,7 +21,8 @@ const get_current_location = () => {
       get_weather_data((lat = latitude), (lon = longitude));
     });
   } else {
-    console.log("Geolocation Disabled");
+    // console.log("Geolocation Disabled");
+    get_weather_data((loc = "manchester"));
     return -1;
   }
 };
@@ -132,7 +133,7 @@ const set_data = (id, data) => {
     parent.querySelector(".third").innerText = data["third"];
   }
 };
-
-if (!get_current_location()) {
-  get_weather_data((loc = "manchester"));
-}
+get_current_location();
+// if (!) {
+//   get_weather_data((loc = "manchester"));
+// }
