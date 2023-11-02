@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="grid-container">
+        <div class="summary">
+          <form role="form" id="form">
+            <input
+              type="text"
+              name="location"
+              id="location"
+              placeholder="Search Location ..."
+            />
+
+            <button type="submit">
+              <img src="./assets/search.png" alt="search-location" />
+            </button>
+          </form>
+
+          <img src="./assets/demo.png" alt="weather image" id="weather-image" />
+
+          <p class="temperature">
+            <span class="figure" id="figure">31</span>
+            <span class="degree">o</span>
+            <span class="unit">C</span>
+          </p>
+
+          <span class="description">Mostly Cloudy</span>
+
+          <p class="local-time" id="local-time">Local Time<br />Day</p>
+
+          <p class="location" id="location-bold">Town, Region<br />Country</p>
+        </div>
+        <div class="details">
+          <p class="intro">Today's Weather Data</p>
+
+          <div class="inner-grid">
+            <!-- Row 1 -->
+            <div class="single" id="celcius">
+              <p class="title">Temp(Celcius)</p>
+              <p class="value">30</p>
+              <p class="third"></p>
+            </div>
+            <div class="single" id="farenheit">
+              <p class="title">Temp(Farenheit)</p>
+              <p class="value">30</p>
+              <p class="third"></p>
+            </div>
+            <div class="single" id="uv">
+              <p class="title">UV Index</p>
+              <p class="value">1.0</p>
+              <p class="third"></p>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="single" id="wind">
+              <p class="title">Wind Speed</p>
+              <p class="value">30</p>
+              <p class="third">Miles Per Hour</p>
+            </div>
+            <div class="single" id="pressure">
+              <p class="title">Pressure</p>
+              <p class="value">30</p>
+              <p class="third">Inches</p>
+            </div>
+            <div class="single" id="wind-degree">
+              <p class="title">Wind Degree</p>
+              <p class="value">170</p>
+              <p class="third">Direction - S</p>
+            </div>
+
+            <!-- Third Row -->
+            <div class="single" id="cloud">
+              <p class="title">Cloud Cover</p>
+              <p class="value">77</p>
+              <p class="third">Percentage</p>
+            </div>
+            <div class="single" id="humidity">
+              <p class="title">Humidity</p>
+              <p class="value">76</p>
+              <p class="third">As Percentage</p>
+            </div>
+            <div class="single" id="wind-gust">
+              <p class="title">Wind Gust</p>
+              <p class="value">30</p>
+              <p class="third">Miles Per Hour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript file -->
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Playfair+Display:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.outer-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1b1f24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outer-container .grid-container {
+  width: 100%;
+  max-width: 1024px;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 400px auto;
+  overflow-y: hidden;
+}
+@media (max-width: 1000px) {
+  .outer-container .grid-container {
+    width: 85%;
+    grid-template-columns: 300px auto;
+  }
+}
+@media (max-width: 870px) {
+  .outer-container .grid-container {
+    width: 95%;
+    grid-template-columns: 1fr;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.outer-container .grid-container .summary {
+  background-color: #ffffff;
+  padding: 2rem;
+}
+@media (max-width: 870px) {
+  .outer-container .grid-container .summary {
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-top: 2rem;
+  }
+}
+.outer-container .grid-container .summary form {
+  display: grid;
+  grid-template-columns: auto 3rem;
+  gap: 1rem;
+  background-color: #eef0f2;
+  border: 2px solid #dadee1;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+.outer-container .grid-container .summary form button {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+.outer-container .grid-container .summary form button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.outer-container .grid-container .summary form input[type=text] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+.outer-container .grid-container .summary img#weather-image {
+  max-width: 3rem;
+  max-height: 3rem;
+  margin: 2rem auto;
+  display: block;
+}
+.outer-container .grid-container .summary p.temperature {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.outer-container .grid-container .summary p.temperature .figure {
+  line-height: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: #1b1f24;
+}
+.outer-container .grid-container .summary p.temperature .degree {
+  font-size: 1rem;
+  transform: translateY(-3rem);
+  display: inline-block;
+}
+.outer-container .grid-container .summary p.temperature .unit {
+  font-size: 2.5rem;
+  transform: translateY(-1.5rem);
+  display: inline-block;
+}
+.outer-container .grid-container .summary span.description {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.85rem;
+  display: block;
+  color: #b1b1b1;
+  margin-bottom: 1.5rem;
+}
+.outer-container .grid-container .summary .local-time {
+  color: #414141;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.outer-container .grid-container .summary .location {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  line-height: 1.5;
+  text-align: center;
+  color: #414141;
+}
+.outer-container .grid-container .details {
+  padding: 2rem;
+  background-color: #eef0f2;
+  overflow: auto;
+}
+@media (max-width: 870px) {
+  .outer-container .grid-container .details {
+    border-radius: 0 0 0.5rem 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+.outer-container .grid-container .details .intro {
+  font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+  color: #414141;
+  margin-bottom: 1rem;
+}
+@media (max-width: 870px) {
+  .outer-container .grid-container .details .intro {
+    text-align: center;
+  }
+}
+.outer-container .grid-container .details .inner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 870px) {
+  .outer-container .grid-container .details .inner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .outer-container .grid-container .details .inner-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.outer-container .grid-container .details .inner-grid .single {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 1.25rem;
+  padding: 1rem;
+  color: #414141;
+  box-shadow: 0px 0px 30px 0px rgba(65, 65, 65, 0.2);
+}
+.outer-container .grid-container .details .inner-grid .single .title, .outer-container .grid-container .details .inner-grid .single .third {
+  word-break: break-all;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+}
+.outer-container .grid-container .details .inner-grid .single .value {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+  line-height: 0;
+}
+.outer-container .grid-container .details .inner-grid .single .third {
+  margin-bottom: 0;
+}/*# sourceMappingURL=main.css.map */
